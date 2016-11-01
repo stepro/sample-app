@@ -1,10 +1,11 @@
 version: "2"
+
 services:
-    service-a-tests:
+    ci-service-tests:
         depends_on:
             - service-a
         image: wernight/phantomjs
         volumes:
             - ./service-a:/src
         working_dir: /src
-        command: ["phantomjs", "tests.js"]
+        command: ["phantomjs", "service-tests.js"]

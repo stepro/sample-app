@@ -1,13 +1,7 @@
 {
   "name": "service-a",
-  "version": "1.0.0",
-  "description": "Sample app for Mindaro",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "version": "0.1.0",
+  "description": "Sample service for multi-container Docker app",
   "dependencies": {
     "express": "^4.13.4",
     "morgan": "^1.7.0",

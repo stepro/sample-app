@@ -1,5 +1,6 @@
 var app = angular.module('myApp', ['ngRoute']);
-    app.controller('MainController', function($scope, $http) {
+
+app.controller('MainController', function($scope, $http) {
 
     $scope.messages = [];
     $scope.sayHelloToServer = function() {

@@ -1,5 +1,0 @@
-version: "2"
-services:
-    service-a:
-        labels:
-            com.microsoft.azure.public.port: "80"
