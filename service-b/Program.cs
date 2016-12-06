@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Runtime.Loader;
 using System.Threading;
 using Microsoft.AspNetCore.Hosting;
-
+anerror
 namespace ServiceB
 {
     public class Program
