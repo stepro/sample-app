@@ -2,7 +2,7 @@ version: "2"
 
 services:
     service-a:
-        build: ./service-a2
+        build: ./service-a
         environment:
             - APPINSIGHTS_INSTRUMENTATIONKEY
         expose:
