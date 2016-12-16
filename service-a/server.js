@@ -8,7 +8,9 @@ if (process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
     };
 }
 var express = require('express');
-var redis = require('redis').createClient("redis://mycache");
+var redis = require('redis').createClient("redis://mycache", {
+    retry_strategy: () => 5
+});
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
@@ -49,9 +51,5 @@ process.on("SIGINT", () => {
 
 process.on("SIGTERM", () => {
     console.log("Terminating...");
-    console.log(JSON.stringify(server, null, '  '));
     server.close();
-    console.log(JSON.stringify(redis, null, '  '));
-    redis.quit();
-    console.log(JSON.stringify(redis, null, '  '));
 });
