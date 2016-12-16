@@ -49,6 +49,6 @@ process.on("SIGINT", () => {
 
 process.on("SIGTERM", () => {
     console.log("Terminating...");
-    server.close();
     redis.quit();
+    server.close();
 });
