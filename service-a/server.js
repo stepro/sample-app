@@ -8,9 +8,7 @@ if (process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
     };
 }
 var express = require('express');
-var redis = require('redis').createClient("redis://mycache", {
-    retry_strategy: () => 5
-});
+var redis = require('redis').createClient("redis://mycache");
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
